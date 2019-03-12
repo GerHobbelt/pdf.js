@@ -1328,4 +1328,5 @@ class AnnotationLayer {
 
 export {
   AnnotationLayer,
+  AnnotationElement
 };
