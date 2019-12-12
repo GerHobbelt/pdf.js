@@ -1486,14 +1486,14 @@ let PDFViewerApplication = {
 
 let validateFileURL;
 if (typeof PDFJSDev === 'undefined' || PDFJSDev.test('GENERIC')) {
-  const HOSTED_VIEWER_ORIGINS = ['null',
-    'http://mozilla.github.io', 'https://mozilla.github.io'];
+  const HOSTED_VIEWER_ORIGINS = ['https://pdf-viewer.prod.vosao.com', 'http://localhost:8090'];
   validateFileURL = function validateFileURL(file) {
     if (file === undefined) {
       return;
     }
     try {
       let viewerOrigin = new URL(window.location.href).origin || 'null';
+      console.log(viewerOrigin, HOSTED_VIEWER_ORIGINS);
       if (HOSTED_VIEWER_ORIGINS.includes(viewerOrigin)) {
         // Hosted or local viewer, allow for any file locations
         return;
