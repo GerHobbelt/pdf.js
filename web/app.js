@@ -1725,9 +1725,8 @@ const PDFViewerApplication = {
 let validateFileURL;
 if (typeof PDFJSDev === "undefined" || PDFJSDev.test("GENERIC")) {
   const HOSTED_VIEWER_ORIGINS = [
-    "null",
-    "http://mozilla.github.io",
-    "https://mozilla.github.io",
+    "https://pdf-viewer.prod.vosao.com",
+    "http://localhost:8090",
   ];
   validateFileURL = function validateFileURL(file) {
     if (file === undefined) {
