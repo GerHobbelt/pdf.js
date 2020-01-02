@@ -1985,10 +1985,10 @@ const PDFViewerApplication = {
 let validateFileURL;
 if (typeof PDFJSDev === "undefined" || PDFJSDev.test("GENERIC")) {
   const HOSTED_VIEWER_ORIGINS = [
-    "https://pdf-viewer.prod.vosao.com",
+    "http://pdf-viewer.doubletrade.vosao.com/",
     "http://localhost:8090",
   ];
-  validateFileURL = function (file) {
+  validateFileURL = function validateFileURL(file) {
     if (file === undefined) {
       return;
     }
