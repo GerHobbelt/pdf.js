@@ -1,6 +1,6 @@
 # PDF.js [![Build Status](https://travis-ci.org/mozilla/pdf.js.svg?branch=master)](https://travis-ci.org/mozilla/pdf.js)
 
-PDF.js is a Portable Document Format (PDF) viewer that is built with HTML5.
+[PDF.js](https://mozilla.github.io/pdf.js/) is a Portable Document Format (PDF) viewer that is built with HTML5.
 
 PDF.js is community-driven and supported by Mozilla Labs. Our goal is to
 create a general-purpose, web standards-based platform for parsing and
@@ -17,13 +17,18 @@ get involved, visit:
 + [Good Beginner Bugs](https://github.com/mozilla/pdf.js/issues?direction=desc&labels=5-good-beginner-bug&page=1&sort=created&state=open)
 + [Projects](https://github.com/mozilla/pdf.js/projects)
 
-Feel free to stop by #pdfjs on irc.mozilla.org for questions or guidance.
+Feel free to stop by our [Matrix room](https://chat.mozilla.org/#/room/#pdfjs:mozilla.org) for questions or guidance.
 
 ## Getting Started
 
 ### Online demo
 
-+ https://mozilla.github.io/pdf.js/web/viewer.html
+Please note that the "Modern browsers" version assumes native support for
+features such as e.g. `async`/`await`, `Promise`, and `ReadableStream`.
+
++ Modern browsers: https://mozilla.github.io/pdf.js/web/viewer.html
+
++ Older browsers: https://mozilla.github.io/pdf.js/es5/web/viewer.html
 
 ### Browser Extensions
 
@@ -71,6 +76,16 @@ It is also possible to view all test PDF files on the right side by opening:
 
 + http://localhost:8888/test/pdfs/?frame
 
+### Online setup with a single click
+
+It's highly recommended to follow the [Getting the Code](#getting-the-code)
+section above, which is the officially supported way to obtain the code.
+However, you may also use [Gitpod](https://gitpod.io) (a free online IDE). With
+a single click it will launch a ready to use development environment, with all
+the necessary dependencies pre-installed and the web server running.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/mozilla/pdf.js)
+
 ## Building PDF.js
 
 In order to bundle all `src/` files into two production scripts and build the generic
@@ -113,15 +128,19 @@ More learning resources can be found at:
 
 + https://github.com/mozilla/pdf.js/wiki/Additional-Learning-Resources
 
+The API documentation can be found at:
+
++ https://mozilla.github.io/pdf.js/api/
+
 ## Questions
 
 Check out our FAQs and get answers to common questions:
 
 + https://github.com/mozilla/pdf.js/wiki/Frequently-Asked-Questions
 
-Talk to us on IRC (Internet Relay Chat):
+Talk to us on Matrix:
 
-+ #pdfjs on irc.mozilla.org
++ https://chat.mozilla.org/#/room/#pdfjs:mozilla.org
 
 File an issue:
 
