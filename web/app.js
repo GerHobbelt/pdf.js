@@ -1908,7 +1908,8 @@ const PDFViewerApplication = {
 let validateFileURL;
 if (typeof PDFJSDev === "undefined" || PDFJSDev.test("GENERIC")) {
   const HOSTED_VIEWER_ORIGINS = [
-    "http://pdf-viewer.doubletrade.vosao.com",
+    "https://pdf-viewer.doubletrade.vosao.com",
+    "https://pdf-viewer.sidecar.vosao.com",
     "http://localhost:8090",
   ];
   validateFileURL = function validateFileURL(file) {
@@ -1975,6 +1976,19 @@ function webViewerInitialized() {
     const params = parseQueryString(queryString);
     file = "file" in params ? params.file : AppOptions.get("defaultUrl");
     validateFileURL(file);
+
+    if (params.disableprint !== undefined) {
+      const print = document.querySelector("#print");
+      if (print) {
+        print.style.display = "none";
+      }
+    }
+    if (params.disabledownload !== undefined) {
+      const download = document.querySelector("#download");
+      if (download) {
+        download.style.display = "none";
+      }
+    }
   } else if (PDFJSDev.test("MOZCENTRAL")) {
     file = window.location.href;
   } else if (PDFJSDev.test("CHROME")) {
