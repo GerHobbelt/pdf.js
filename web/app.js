@@ -2073,11 +2073,19 @@ function webViewerInitialized() {
       if (print) {
         print.style.display = "none";
       }
+      const secondaryPrint = document.querySelector("#secondaryPrint");
+      if (secondaryPrint) {
+        secondaryPrint.style.display = "none";
+      }
     }
     if (params.disabledownload !== undefined) {
       const download = document.querySelector("#download");
       if (download) {
         download.style.display = "none";
+      }
+      const secondaryDownload = document.querySelector("#secondaryDownload");
+      if (secondaryDownload) {
+        secondaryDownload.style.display = "none";
       }
     }
   } else if (PDFJSDev.test("MOZCENTRAL")) {
