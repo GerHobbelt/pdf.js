@@ -1969,6 +1969,10 @@ function loadAndEnablePDFBug(enabledTabs) {
 }
 
 function webViewerInitialized() {
+  // Prevent copy from keyboard and from mouse
+  document.addEventListener("contextmenu", event => event.preventDefault());
+  document.addEventListener("keydown", event => event.preventDefault());
+  document.addEventListener("keyup", event => event.preventDefault());
   const appConfig = PDFViewerApplication.appConfig;
   let file;
   if (typeof PDFJSDev === "undefined" || PDFJSDev.test("GENERIC")) {
