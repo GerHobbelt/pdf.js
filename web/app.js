@@ -1995,6 +1995,14 @@ function reportPageStatsPDFBug({ pageNumber }) {
   Stats.add(pageNumber, pageStats);
 }
 
+function controlCopy(e) {
+  const c = e.keyCode;
+  const ctrlDown = e.ctrlKey || e.metaKey;
+  if ((ctrlDown && c === 88) || (ctrlDown && c === 67)) {
+    e.preventDefault();
+  }
+}
+
 function webViewerInitialized() {
   const appConfig = PDFViewerApplication.appConfig;
   let file;
@@ -2007,8 +2015,8 @@ function webViewerInitialized() {
     if (params.disablecopy !== undefined) {
       // Prevent copy from keyboard and from mouse
       document.addEventListener("contextmenu", event => event.preventDefault());
-      document.addEventListener("keydown", event => event.preventDefault());
-      document.addEventListener("keyup", event => event.preventDefault());
+      document.addEventListener("keydown", controlCopy);
+      document.addEventListener("keyup", controlCopy);
     }
 
     if (params.disableprint !== undefined) {
