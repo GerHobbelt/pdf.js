@@ -2103,6 +2103,16 @@ function webViewerInitialized() {
         secondaryDownload.style.display = "none";
       }
     }
+    if (params.disableopen !== undefined) {
+      const download = document.querySelector("#openFile");
+      if (download) {
+        download.style.display = "none";
+      }
+      const secondaryDownload = document.querySelector("#secondaryOpenFile");
+      if (secondaryDownload) {
+        secondaryDownload.style.display = "none";
+      }
+    }
   } else if (PDFJSDev.test("MOZCENTRAL")) {
     file = window.location.href;
   } else if (PDFJSDev.test("CHROME")) {
