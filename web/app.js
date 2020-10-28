@@ -1987,6 +1987,8 @@ if (typeof PDFJSDev === "undefined" || PDFJSDev.test("GENERIC")) {
   const HOSTED_VIEWER_ORIGINS = [
     "https://pdf-viewer.doubletrade.vosao.com",
     "https://pdf-viewer.sidecar.vosao.com",
+    "https://pdfviewer.insight.doubletrade.com",
+    "https://pdfviewer.insight.spigao.com",
     "http://localhost:8090",
   ];
   validateFileURL = function validateFileURL(file) {
