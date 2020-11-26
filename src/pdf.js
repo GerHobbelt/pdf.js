@@ -49,7 +49,7 @@ import {
   Util,
   VerbosityLevel,
 } from "./shared/util.js";
-import { AnnotationLayer } from "./display/annotation_layer.js";
+import { AnnotationLayer, AnnotationElement } from "./display/annotation_layer.js";
 import { apiCompatibilityParams } from "./display/api_compatibility.js";
 import { GlobalWorkerOptions } from "./display/worker_options.js";
 import { renderTextLayer } from "./display/text_layer.js";
@@ -156,6 +156,7 @@ export {
   VerbosityLevel,
   // From "./display/annotation_layer.js":
   AnnotationLayer,
+  AnnotationElement,
   // From "./display/api_compatibility.js":
   apiCompatibilityParams,
   // From "./display/worker_options.js":
