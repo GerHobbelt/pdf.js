@@ -239,21 +239,6 @@ if (
     globalThis.Promise = require("core-js/es/promise/index.js");
   })();
 
-  // Support: IE
-  (function checkURL() {
-    if (typeof PDFJSDev !== "undefined" && PDFJSDev.test("IMAGE_DECODERS")) {
-      // The current image decoders don't use the `URL` constructor, so it
-      // doesn't need to be polyfilled for the IMAGE_DECODERS build target.
-      return;
-    }
-    if (typeof PDFJSDev !== "undefined" && !PDFJSDev.test("GENERIC")) {
-      // The `URL` constructor is assumed to be available in the extension
-      // builds.
-      return;
-    }
-    globalThis.URL = require("core-js/web/url.js");
-  })();
-
   // Support: IE, Node.js
   (function checkReadableStream() {
     if (typeof PDFJSDev !== "undefined" && PDFJSDev.test("IMAGE_DECODERS")) {
